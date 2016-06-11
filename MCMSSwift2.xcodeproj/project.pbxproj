@@ -13,6 +13,8 @@
 		35E78C2B1D0C7C970054EE59 /* MCMSSwift2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35E78C291D0C7C970054EE59 /* MCMSSwift2.xcdatamodeld */; };
 		35E78C2D1D0C7C970054EE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E78C2C1D0C7C970054EE59 /* Assets.xcassets */; };
 		35E78C301D0C7C970054EE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E78C2E1D0C7C970054EE59 /* LaunchScreen.storyboard */; };
+		35E78C381D0C82320054EE59 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E78C371D0C82320054EE59 /* CatViewController.swift */; };
+		35E78C3A1D0C87710054EE59 /* MagicalCreature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E78C391D0C87710054EE59 /* MagicalCreature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		35E78C2C1D0C7C970054EE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35E78C2F1D0C7C970054EE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35E78C311D0C7C970054EE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E78C371D0C82320054EE59 /* CatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
+		35E78C391D0C87710054EE59 /* MagicalCreature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicalCreature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				35E78C221D0C7C970054EE59 /* AppDelegate.swift */,
 				35E78C241D0C7C970054EE59 /* ViewController.swift */,
+				35E78C371D0C82320054EE59 /* CatViewController.swift */,
 				35E78C261D0C7C970054EE59 /* Main.storyboard */,
 				35E78C2C1D0C7C970054EE59 /* Assets.xcassets */,
+				35E78C391D0C87710054EE59 /* MagicalCreature.swift */,
 				35E78C2E1D0C7C970054EE59 /* LaunchScreen.storyboard */,
 				35E78C311D0C7C970054EE59 /* Info.plist */,
 				35E78C291D0C7C970054EE59 /* MCMSSwift2.xcdatamodeld */,
@@ -140,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				35E78C251D0C7C970054EE59 /* ViewController.swift in Sources */,
+				35E78C381D0C82320054EE59 /* CatViewController.swift in Sources */,
 				35E78C2B1D0C7C970054EE59 /* MCMSSwift2.xcdatamodeld in Sources */,
+				35E78C3A1D0C87710054EE59 /* MagicalCreature.swift in Sources */,
 				35E78C231D0C7C970054EE59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
