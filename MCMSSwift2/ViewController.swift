@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var personalityTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     var magicalCreatures = []
-    
+    var creatureFound: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func onAddCatPressed(sender: UIButton) {
         
-        let employee = NSEntityDescription.insertNewObjectForEntityForName("Employee", inManagedObjectContext: self.managedObjectContext) as! AAAEmployeeMO
+        if creatureFound == true  {
+            let creature = NSEntityDescription.insertNewObjectForEntityForName("Creature", inManagedObjectContext: self.managedObjectContext) as! Creature
+
+        }
         
+      
         
         
         
