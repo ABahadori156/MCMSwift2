@@ -26,8 +26,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    @IBAction func onAddCatPressed(sender: UIButton) {
+//        let dvc:UIViewController = UIStoryboard(name: "CatViewController", bundle: nil).instantiateViewControllerWithIdentifier("CatViewID") as! CatViewController
+//        self.presentViewController(dvc, animated: false, completion: nil)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("CatViewID") as! CatViewController
+        
+        // below code is the execution to send us to CatViewController
+        self.navigationController?.showViewController(vc, sender: nil)
+
+    }
     
-    
+       
     
     
 

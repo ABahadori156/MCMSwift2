@@ -15,6 +15,7 @@
 		35E78C301D0C7C970054EE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E78C2E1D0C7C970054EE59 /* LaunchScreen.storyboard */; };
 		35E78C381D0C82320054EE59 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E78C371D0C82320054EE59 /* CatViewController.swift */; };
 		35E78C3A1D0C87710054EE59 /* MagicalCreature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E78C391D0C87710054EE59 /* MagicalCreature.swift */; };
+		35E78C3C1D0CA39A0054EE59 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E78C3B1D0CA39A0054EE59 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		35E78C311D0C7C970054EE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35E78C371D0C82320054EE59 /* CatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		35E78C391D0C87710054EE59 /* MagicalCreature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicalCreature.swift; sourceTree = "<group>"; };
+		35E78C3B1D0CA39A0054EE59 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				35E78C391D0C87710054EE59 /* MagicalCreature.swift */,
 				35E78C2E1D0C7C970054EE59 /* LaunchScreen.storyboard */,
 				35E78C311D0C7C970054EE59 /* Info.plist */,
+				35E78C3B1D0CA39A0054EE59 /* DataController.swift */,
 				35E78C291D0C7C970054EE59 /* MCMSSwift2.xcdatamodeld */,
 			);
 			path = MCMSSwift2;
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35E78C251D0C7C970054EE59 /* ViewController.swift in Sources */,
+				35E78C3C1D0CA39A0054EE59 /* DataController.swift in Sources */,
 				35E78C381D0C82320054EE59 /* CatViewController.swift in Sources */,
 				35E78C2B1D0C7C970054EE59 /* MCMSSwift2.xcdatamodeld in Sources */,
 				35E78C3A1D0C87710054EE59 /* MagicalCreature.swift in Sources */,

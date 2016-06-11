@@ -76,6 +76,9 @@
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="onAddCatPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dii-RI-ZMw"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -92,7 +95,7 @@
         <!--Cat View Controller-->
         <scene sceneID="Fa6-XN-H5f">
             <objects>
-                <viewController id="Z5s-Jf-VkS" customClass="CatViewController" customModule="MCMSSwift2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CatViewID" id="Z5s-Jf-VkS" customClass="CatViewController" customModule="MCMSSwift2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9HJ-3l-Pm5"/>
                         <viewControllerLayoutGuide type="bottom" id="KDS-pE-rkA"/>
