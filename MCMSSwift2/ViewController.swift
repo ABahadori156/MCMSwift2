@@ -27,18 +27,52 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func onAddCatPressed(sender: UIButton) {
-//        let dvc:UIViewController = UIStoryboard(name: "CatViewController", bundle: nil).instantiateViewControllerWithIdentifier("CatViewID") as! CatViewController
-//        self.presentViewController(dvc, animated: false, completion: nil)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("CatViewID") as! CatViewController
+        let employee = NSEntityDescription.insertNewObjectForEntityForName("Employee", inManagedObjectContext: self.managedObjectContext) as! AAAEmployeeMO
         
-        // below code is the execution to send us to CatViewController
-        self.navigationController?.showViewController(vc, sender: nil)
+        
+        
+        
+//        if (self.catFound == NO) {
+//            self.catToBeSaved = [NSEntityDescription insertNewObjectForEntityForName:@"Cat" inManagedObjectContext:self.moc];
+//            self.catToBeSaved.name = self.nameTextField.text;
+//            self.catToBeSaved.breed = self.breedTextField.text;
+//            self.catToBeSaved.color = self.colorTextField.text;
+//        }
+//        
+//        [self.selectedOwner addCatsObject:self.catToBeSaved];
+//        //    [self.selectedOwner addSuggestedBooksObject:self.catToBeSaved];
+//        [self saveCats];
+//        [self.nameTextField endEditing:YES];
+//        [self.breedTextField endEditing:YES];
+//        [self.colorTextField endEditing:YES];
+//        
+//        self.nameTextField.text = nil;
+//        self.breedTextField.text = nil;
+//        self.colorTextField.text = nil;
+//        
+//        
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//        NSLog(@"CAT ADDED");
 
     }
     
        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 
@@ -47,6 +81,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return magicalCreatures.count
     }
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("CatViewID") as! CatViewController
+        
+        // below code is the execution to send us to CatViewController
+        self.navigationController?.showViewController(vc, sender: nil)
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
