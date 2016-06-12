@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35E76B151D0CD86C008FBD8F /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E76B141D0CD86C008FBD8F /* Alert.swift */; };
 		35E78C231D0C7C970054EE59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E78C221D0C7C970054EE59 /* AppDelegate.swift */; };
 		35E78C251D0C7C970054EE59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E78C241D0C7C970054EE59 /* ViewController.swift */; };
 		35E78C281D0C7C970054EE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E78C261D0C7C970054EE59 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35E76B141D0CD86C008FBD8F /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		35E78C1F1D0C7C970054EE59 /* MCMSSwift2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCMSSwift2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E78C221D0C7C970054EE59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35E78C241D0C7C970054EE59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +32,8 @@
 		35E78C2F1D0C7C970054EE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35E78C311D0C7C970054EE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35E78C371D0C82320054EE59 /* CatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
-		35E78C391D0C87710054EE59 /* MagicalCreature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicalCreature.swift; sourceTree = "<group>"; };
-		35E78C3B1D0CA39A0054EE59 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		35E78C391D0C87710054EE59 /* MagicalCreature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagicalCreature.swift; path = MCMSSwift2/MagicalCreature.swift; sourceTree = "<group>"; };
+		35E78C3B1D0CA39A0054EE59 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = MCMSSwift2/DataController.swift; sourceTree = "<group>"; };
 		465718B71D0CA9DB008EABBF /* Creature+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Creature+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		465718B81D0CA9DB008EABBF /* Creature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,8 +52,11 @@
 		35E78C161D0C7C970054EE59 = {
 			isa = PBXGroup;
 			children = (
+				35E78C3B1D0CA39A0054EE59 /* DataController.swift */,
 				465718B71D0CA9DB008EABBF /* Creature+CoreDataProperties.swift */,
 				465718B81D0CA9DB008EABBF /* Creature.swift */,
+				35E78C391D0C87710054EE59 /* MagicalCreature.swift */,
+				35E76B141D0CD86C008FBD8F /* Alert.swift */,
 				35E78C211D0C7C970054EE59 /* MCMSSwift2 */,
 				35E78C201D0C7C970054EE59 /* Products */,
 			);
@@ -73,10 +78,8 @@
 				35E78C371D0C82320054EE59 /* CatViewController.swift */,
 				35E78C261D0C7C970054EE59 /* Main.storyboard */,
 				35E78C2C1D0C7C970054EE59 /* Assets.xcassets */,
-				35E78C391D0C87710054EE59 /* MagicalCreature.swift */,
 				35E78C2E1D0C7C970054EE59 /* LaunchScreen.storyboard */,
 				35E78C311D0C7C970054EE59 /* Info.plist */,
-				35E78C3B1D0CA39A0054EE59 /* DataController.swift */,
 				35E78C291D0C7C970054EE59 /* MCMSSwift2.xcdatamodeld */,
 			);
 			path = MCMSSwift2;
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E76B151D0CD86C008FBD8F /* Alert.swift in Sources */,
 				35E78C251D0C7C970054EE59 /* ViewController.swift in Sources */,
 				465718B91D0CA9DB008EABBF /* Creature+CoreDataProperties.swift in Sources */,
 				35E78C3C1D0CA39A0054EE59 /* DataController.swift in Sources */,

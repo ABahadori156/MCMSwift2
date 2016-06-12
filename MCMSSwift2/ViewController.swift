@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var catNameTextField: UITextField!
+   
+    @IBOutlet weak var creatureNameTextField: UITextField!
     @IBOutlet weak var personalityTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     var magicalCreatures = []
+    var creaturesArray = []
+    var creaturesImageArray = []
     var creatureFound: Bool?
+    
+    
+    let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,63 +30,56 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let mohammed = MagicalCreature(withName: "Mohammed")
         let vala = MagicalCreature(withName: "Vala")
         
-        magicalCreatures = [amir, salar, mohammed, vala]
+        creaturesArray = [amir, salar, mohammed, vala]
+        
+    }
+
+    func loadFetchRequest{
         
     }
     
-    @IBAction func onAddCatPressed(sender: UIButton) {
+    
+    
+    @IBAction func onAddCatPressed(sender: AnyObject) {
         
-        if creatureFound == true  {
-            let creature = NSEntityDescription.insertNewObjectForEntityForName("Creature", inManagedObjectContext: self.managedObjectContext) as! Creature
-
+//            let creature = NSEntityDescription.insertNewObjectForEntityForName("Creature", inManagedObjectContext: self.managedObjectContext) as! Creature
+//        creature.creatureName = name
+        let creature = NSEntityDescription.entityForName("Creature", inManagedObjectContext: moc)
+        let saveCreature = Creature(entity: creature!, insertIntoManagedObjectContext: moc)
+        
+        let img1 = UIImage(named: "cat1")
+        let img2 = UIImage(named: "cat2")
+        let img3 = UIImage(named: "cat3")
+        let img4 = UIImage(named: "cat4")
+        let img5 = UIImage(named: "cat5")
+        let imgData1 = UIImageJPEGRepresentation(img1!, 1)
+        let imgData2 = UIImageJPEGRepresentation(img2!, 1)
+        let imgData3 = UIImageJPEGRepresentation(img3!, 1)
+        let imgData4 = UIImageJPEGRepresentation(img4!, 1)
+        let imgData5 = UIImageJPEGRepresentation(img5!, 1)
+        
+        creaturesImageArray = [imgData1!, imgData2!, imgData3!, imgData4!, imgData5!]
+        
+        saveCreature.creatureName = creatureNameTextField.text!
+        saveCreature.creatureImage = imgData1
+        
+        do {
+            try moc.save()
+            creatureNameTextField.text = ""
+            Alert.show("Success", message: "Your Creature is Saved", vc: self)
+            
+        } catch let error as NSError {
+             Alert.show("Failed", message: "Failed to Save Creature", vc: self)
+            
         }
+
         
-      
-        
-        
-        
-//        if (self.catFound == NO) {
-//            self.catToBeSaved = [NSEntityDescription insertNewObjectForEntityForName:@"Cat" inManagedObjectContext:self.moc];
-//            self.catToBeSaved.name = self.nameTextField.text;
-//            self.catToBeSaved.breed = self.breedTextField.text;
-//            self.catToBeSaved.color = self.colorTextField.text;
-//        }
-//        
-//        [self.selectedOwner addCatsObject:self.catToBeSaved];
-//        //    [self.selectedOwner addSuggestedBooksObject:self.catToBeSaved];
-//        [self saveCats];
-//        [self.nameTextField endEditing:YES];
-//        [self.breedTextField endEditing:YES];
-//        [self.colorTextField endEditing:YES];
-//        
-//        self.nameTextField.text = nil;
-//        self.breedTextField.text = nil;
-//        self.colorTextField.text = nil;
-//        
-//        
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//        NSLog(@"CAT ADDED");
+        creatureNameTextField.resignFirstResponder()
+        personalityTextField.resignFirstResponder()
+        personalityTextField.text = nil
 
     }
-    
-       
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 
 // ------------------------------------TABLEVIEW METHODS -----------------------------------------
     func  tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -102,7 +103,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let magicalCreature = self.magicalCreatures[indexPath.row] as! MagicalCreature
         cell!.textLabel!.text = magicalCreature.name
         return cell!
-        
+    
     }
 
 

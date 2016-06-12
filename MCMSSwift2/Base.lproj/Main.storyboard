@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9be-5T-La2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9be-5T-La2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -51,7 +51,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="R8D-ax-zzE"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Cat Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLH-xk-EKk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Creature Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLH-xk-EKk">
                                 <rect key="frame" x="20" y="72" width="210" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -83,7 +83,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="catNameTextField" destination="FLH-xk-EKk" id="m4a-cp-LaT"/>
+                        <outlet property="creatureNameTextField" destination="FLH-xk-EKk" id="wll-V6-DP1"/>
                         <outlet property="personalityTextField" destination="cNL-gB-h3P" id="P7f-5c-P6u"/>
                         <outlet property="tableView" destination="Tx6-U4-l2C" id="qa3-Go-Xn8"/>
                     </connections>
