@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var creaturesImageArray = []
     var creatureFound: Bool?
     
+
     
     let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
@@ -34,8 +35,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
 
-    func loadFetchRequest{
+    override func viewDidAppear(animated: Bool) {
+        let appDelegate = UIApplication .sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Creature")
         
+        
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            creaturesArray = results as! [NSManagedObject]
+        }
+        catch {
+           print("error")
+        }
     }
     
     
@@ -65,10 +77,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do {
             try moc.save()
-            creatureNameTextField.text = ""
+            creatureNameTextField.text = nil
             Alert.show("Success", message: "Your Creature is Saved", vc: self)
             
-        } catch let error as NSError {
+        } catch
+            let error as NSError {
              Alert.show("Failed", message: "Failed to Save Creature", vc: self)
             
         }
@@ -83,7 +96,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 // ------------------------------------TABLEVIEW METHODS -----------------------------------------
     func  tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return magicalCreatures.count
+        return creaturesArray.count
     }
     
     
@@ -100,7 +113,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCellWithIdentifier("CellID")
         // as! says that this is a Magical Creature, if it's anything else, xcode will crash.
-        let magicalCreature = self.magicalCreatures[indexPath.row] as! MagicalCreature
+        let magicalCreature = self.creaturesArray[indexPath.row] as! MagicalCreature
         cell!.textLabel!.text = magicalCreature.name
         return cell!
     
